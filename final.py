@@ -16,7 +16,7 @@ def connect_db():
     return mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Dharshana_8778",
+        password=os.getenv("APP_PASSWORD", ""),
         database="TamilMoviesDB"
     )
 
